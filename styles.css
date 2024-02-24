@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif; /* Fuente predeterminada */
     margin: 0; /* Elimina el margen exterior */
     padding: 0; /* Elimina el relleno exterior */
-    background-color: #ffffff; /* Color de fondo */
+    background-color: #333; /* Color de fondo */
 }
 
 /* Estilos para el encabezado */
@@ -13,7 +13,14 @@ header {
     color: #fff; /* Color del texto */
     text-align: center; /* Alineación del texto */
     padding: 10px 0; /* Espaciado interno */
-}
+    font-family: 'Press Start 2P', cursive; /* Utiliza la fuente Press Start 2P */
+    font-size: 36px; /* Tamaño de fuente */
+    font-weight: bold; /* Peso de fuente en negrita */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+
+    }
+
+
 
 /* Estilos para el contenedor principal */
 .container {
@@ -22,17 +29,48 @@ header {
     display: flex; /* Utiliza flexbox para el diseño */
     flex-wrap: wrap; /* Permite envolver elementos en varias líneas */
     background-color: #000000; /* Color de fondo */
+    margin-top: 15px; /* Margen superior */
 }
 
 /* Estilos para el contenido principal */
 .content {
     flex: 70%; /* Ocupa aproximadamente el 70% del espacio disponible */
     padding: 20px; /* Espaciado interno */
-    background-color: #ffffff; /* Color de fondo */
+    background-color: #d7dddf; /* Color de fondo */
     border-radius: 5px; /* Borde redondeado */
     margin-right: 30px; /* Margen derecho para separar la barra lateral */
     text-align: justify; /* Justifica el texto */
     font-family: 'Press Start 2P', cursive; /* Utiliza la fuente Press Start 2P */
+    
+}
+
+.content h3{
+    flex: 20%; /* Ocupa aproximadamente el 20% del espacio disponible */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 5px; /* Borde redondeado */
+    text-align: justify; /* Justifica el texto */
+    font-family: Arial, sans-serif; /* Fuente predeterminada */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+    font-family: 'Georgia', serif; /* Utiliza la fuente Georgia como alternativa serif */
+    font-weight: bold; /* Peso de fuente en negrita */
+    font-size: 30px; /* Tamaño de fuente */
+
+}
+
+
+
+
+.content p{
+    flex: 20%; /* Ocupa aproximadamente el 20% del espacio disponible */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 5px; /* Borde redondeado */
+    text-align: justify; /* Justifica el texto */
+    font-family: Arial, sans-serif; /* Fuente predeterminada */
+    font-weight: bold; /* Hace que el texto sea más grueso */
+    font-family: 'Georgia', serif; /* Utiliza la fuente Georgia como alternativa serif */
+    font-weight: bold; /* Peso de fuente en negrita */
+    font-size: 30px; /* Tamaño de fuente */
+
 }
 
 /* Estilos para la barra lateral */
@@ -42,6 +80,9 @@ header {
     background-color: #ff0000; /* Color de fondo */
     border-radius: 5px; /* Borde redondeado */
     text-align: justify; /* Justifica el texto */
+    color: #fff; /* Color del texto */
+    font-weight: bold; /* Peso de fuente en negrita */
+    font-size: 20px; /* Tamaño de fuente */
 }
 
 /* Estilos para el pie de página */
@@ -62,10 +103,12 @@ footer {
 }
 
 .horizontal-paragraphs div {
-    width: calc(33.33% - 20px); /* Calcula el ancho del elemento */
+    width: 100%; /* Ocupa todo el ancho disponible en dispositivos móviles */
     margin-bottom: 20px; /* Margen inferior */
     text-align: justify; /* Justifica el texto */
     text-align: center; /* Alineación del texto */
+    padding: 0 10px; /* Espaciado interno */
+    font-weight: bold; /* Peso de fuente en negrita */
 }
 
 .horizontal-paragraphs h3 {
@@ -77,6 +120,7 @@ footer {
     padding: 5px 10px; /* Espaciado interno */
     border-radius: 5px; /* Borde redondeado */
     text-align: center; /* Alineación del texto */
+    font-weight: bold; /* Peso de fuente en negrita */
 }
 
 /* Estilos para el título */
@@ -88,11 +132,88 @@ footer {
 /* Estilos para la imagen cuadrada */
 .image {
     text-align: center; /* Alineación del texto */
-    margin-top: 20px; /* Margen superior */
+    margin-top: 60px; /* Margen superior */
 }
 
 .image img {
-    width: 200px; /* Ancho de la imagen */
-    height: 200px; /* Alto de la imagen */
-    text-align: center; /* Alineación del texto */
+    max-width: 200%; /* Ancho máximo de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; /* Mostrar la imagen como un bloque para centrarla correctamente */
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+    border-radius: 5px; /* Borde redondeado */
+    box-shadow: 0 0 70px rgb(49, 45, 45); /* Sombra ligera */
 }
+
+
+/* Media queries para dispositivos móviles y tabletas */
+@media only screen and (max-width: 600px) {
+    .container {
+        margin: 20px auto; /* Margen automático para centrar el contenedor en dispositivos móviles */
+    }
+
+    .horizontal-paragraphs div {
+        width: 100%; /* Ocupa todo el ancho disponible en dispositivos móviles */
+        margin: 0 auto; /* Centra el contenido */
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .container {
+        max-width: 1200px;/* Ancho máximo del contenedor para tabletas */
+        margin: 20px auto; /* Margen automático para centrar el contenedor en tabletas */
+    }
+
+    .horizontal-paragraphs div {
+        width: calc(50% - 20px); /* Calcula el ancho del elemento para tabletas */
+        margin: 0 auto; /* Centra el contenido */
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 1200px; /* Ancho máximo del contenedor para iPads y tablets */
+        margin: 20px auto; /* Margen automático para centrar el contenedor en iPads y tablets */
+    }
+
+    .horizontal-paragraphs div {
+        width: calc(33.33% - 20px); /* Calcula el ancho del elemento para iPads y tablets */
+        margin: 0 auto; /* Centra el contenido */
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .container {
+        max-width: 1200px; /* Ancho máximo del contenedor para dispositivos medianos */
+        margin: 20px auto; /* Margen automático para centrar el contenedor en dispositivos medianos */
+    }
+
+    .horizontal-paragraphs div {
+        width: calc(33.33% - 20px); /* Calcula el ancho del elemento para dispositivos medianos */
+        margin: 0 auto; /* Centra el contenido */
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px; /* Ancho máximo del contenedor para dispositivos grandes */
+        margin: 20px auto; /* Margen automático para centrar el contenedor en dispositivos grandes */
+    }
+
+    .horizontal-paragraphs div {
+        width: calc(33.33% - 20px); /* Calcula el ancho del elemento para dispositivos grandes */
+        margin: 0 auto; /* Centra el contenido */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
